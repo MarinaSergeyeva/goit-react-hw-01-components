@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Statistics.module.css'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'; 
 
 
 const Statistics = ({ stats }) => {
@@ -10,7 +10,7 @@ const Statistics = ({ stats }) => {
 
       <ul className={styles.stat_list}>
         {stats.map(stat => (
-          <li className={styles.item} style={{backgroundColor: `#${((Math.random() * 0xffffff) << 0).toString(16)}`}}>            <span className="label">{stat.label}</span>
+          <li className={styles.item} key={stat.percentage} style={{backgroundColor: `#${((Math.random() * 0xffffff) << 0).toString(16)}`}}>            <span className="label">{stat.label}</span>
             <span className={styles.percentage}>{stat.percentage}%</span>
           </li>
         ))}
